@@ -2,19 +2,26 @@
 switch_case
 ===========
 
-A Python implementation of switch and case statements.
+A Dynamic, non-cascading Switch/case implementation for Python.
+Since this class was made for users transitioning from languages with switch cases, no reserved words exist for switch case, or should ever be made (to prevent long term use of switch cases). This project exists to demonstrate the power of Python and help transitioning coders.
 
-This is Open Source under BSD license.  The example files shows how to use it,
-including extensive documentation and examples.
+Here are a few examples of switch cases (from wikipedia) translated from native language to switch_case.py Python implementation:
 
-This works under both Python 2.7 and 3.2 (as well as other Python versions, I'm sure).
+Ruby
+====
 
-
-I've seen a few implementations of Switch / Case -type statements in Python, but none 
-of them looked very elegant.  So I decided to write one of my own.
-
-Of course, I over-engineered it.  But I learned a lot.
-
-
-View the switch_case_examples.py file to see how it works.
-Feedback is encouraged!  I hope someone enjoys it! 
+    case n
+    when 0 
+        puts 'You typed zero'
+    when 1, 9 
+        puts 'n is a perfect square'
+    when 2 
+        puts 'n is a prime number'
+        puts 'n is an even number'
+    when 3, 5, 7 
+        puts 'n is a prime number'
+    when 4, 6, 8 
+        puts 'n is an even number'
+    else              
+        puts 'Only single-digit numbers are allowed'
+    end
