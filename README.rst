@@ -81,14 +81,14 @@ That's a little better... still fairly bulky and ugly. We can keep the ruby word
     if when(4): pass
     if when(6): pass
     if when(8):
-        print 'n is a even number'
+        print 'n is an even number'
         when.stop()
     if when(3): pass
     if when(5): pass
     if when(7):
         print 'n is a prime number'
         when.stop()
-    if when.default():
+    if when.default:
         print 'Only single-digit numbers are allowed'
 
 
@@ -110,14 +110,14 @@ switch_case also has support for indented switch cases (without breaking Python)
         if breakfast(4): pass
         if breakfast(6): pass
         if breakfast(8):
-            print 'n is a even number'
+            print 'n is an even number'
             breakfast.stop()
         if breakfast(3): pass
         if breakfast(5): pass
         if breakfast(7):
             print 'n is a prime number'
             breakfast.stop()
-        if breakfast.default():
+        if breakfast.default:
             print 'Only single-digit numbers are allowed'
 
 
