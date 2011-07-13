@@ -7,8 +7,8 @@ Since this class was made for users transitioning from languages with switch cas
 
 Here are a few examples of switch cases (from wikipedia) translated from native language to switch_case.py Python implementation:
 
-Ruby
-====
+Ruby and beyond!
+================
 
 The following is a Ruby excerpt:: 
 
@@ -121,16 +121,18 @@ switch_case also has support for indented switch cases (without breaking Python)
             print 'Only single-digit numbers are allowed'
 
 
-Silliness, but it helps illustrate how dynamic the Switch class can be. Unfortunately, there is no support for nested Switch cases, without calling them by different names: Pseudo-code sampler::
+Silliness, but it helps illustrate how dynamic the Switch class can be. Unfortunately, there is no support for nested Switch cases, without calling them by different names: Pseudo-code sampler of an equivalent look to::
 
     switch(n)
         case(1):
-            switch1(m):
-                case(1):
+            switch(m):
+                case1(1):
                     etc...
                 ...
             end
          ...
     end
+
+Of course, if you use nested switch cases, you might have other issues... in your brain.
  
         
