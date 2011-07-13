@@ -93,4 +93,44 @@ That's a little better... still fairly bulky and ugly. We can keep the ruby word
 
 
 Bigger, but certainly cleaner looking... switch_case supports a number of varieties of switch cases, each with their own benefit for a given switch layout; sometimes one will look better than another. In some languages, that would limit you, but not with switch_case.py in Python!
+
+switch_case also has support for indented switch cases (without breaking Python), as some people use this for readability. You can do this with the "with" reserved word. At the moment, nothing special is done with "with", but there are placeholders that allow it for indentation sake. In the future features may be added to "with"; or you can make them now! Here's a sample of how to use the code like this... now using cooler words in place of case and when!::
+
+    from switch_case import Switch as spam
+
+    with spam(n) as breakfast:
+        if breakfast(0):
+            print 'You typed zero'
+            breakfast.stop()
+        if breakfast(1): pass
+        if breakfast(9):
+            print 'n is a perfect square'
+            breakfast.stop()
+        if breakfast(2): pass
+        if breakfast(4): pass
+        if breakfast(6): pass
+        if breakfast(8):
+            print 'n is a even number'
+            breakfast.stop()
+        if breakfast(3): pass
+        if breakfast(5): pass
+        if breakfast(7):
+            print 'n is a prime number'
+            breakfast.stop()
+        if breakfast.default():
+            print 'Only single-digit numbers are allowed'
+
+
+Silliness, but it helps illustrate how dynamic the Switch class can be. Unfortunately, there is no support for nested Switch cases, without calling them by different names: Pseudo-code sampler::
+
+    switch(n)
+        case(1):
+            switch1(m):
+                case(1):
+                    etc...
+                ...
+            end
+         ...
+    end
+ 
         
