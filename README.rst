@@ -27,3 +27,27 @@ The following is a Ruby excerpt::
     else
         puts 'Only single-digit numbers are allowed'
     end
+
+
+Then you have the Python translation using switch_case.py, note that ruby does **not** have fall through.::
+
+    #Import switch_case stuff, Ruby doesn't use the word "switch", so we alias it to be nice
+    from switch_case import Switch as case
+
+    when = case(n, fallthrough = False)
+    if when(0):
+        print 'You typed zero' #Python 3 works too...
+    if when(1) or when(9):
+        print 'n is a perfect square'
+    if when(2):
+        print 'n is a prime number'
+        print 'n is an even number'
+    if when(3) or when(5) or when(7):
+        print 'n is a prime number'
+    if when(4) or when(6) or when(8):
+        print 'n is an even number'
+    if when.default
+        print 'Only single-digit numbers are allowed'
+
+That's pretty close right?
+
