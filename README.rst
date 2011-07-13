@@ -136,5 +136,68 @@ Silliness, but it helps illustrate how dynamic the Switch class can be. Unfortun
     end
 
 Of course, if you use nested switch cases, you might have other issues... in your brain.
- 
-        
+
+
+To you sharp C# folks
+=====================
+
+Here's a C# excerpt (wikipedia)::
+
+    switch (n)
+    {
+        case 0:
+            Console.WriteLine("You typed zero.");
+            break;
+        case 1:
+        case 4:
+        case 9:
+            Console.WriteLine("n is a perfect square.");
+            break;
+        case 2:
+            Console.WriteLine("n is an even number.");
+            goto case 3;
+        case 3:
+        case 5:
+        case 7:
+            Console.WriteLine("n is a prime number.");
+            break;
+        case 6:
+        case 8:
+            Console.WriteLine("n is an even number.");
+            break;
+        default:
+            Console.WriteLine("Only single-digit numbers are allowed.");
+            break;
+     }
+
+
+Translates well to Python like so::
+
+    from switch_case import Switch as switch
+
+    with switch(n) as case:
+        if case(0):
+            print("You typed zero.")
+            case.stop()
+        if case(1): pass
+        if case(4): pass
+        if case(9):
+            print("n is a perfect square.")
+            case.stop()
+        if case(2):
+            print("n is an even number")
+            #A goto here would have more potential, but as its used, a simple fall will emulate it
+        if case(3): pass
+        if case(5): pass
+        if case(7):
+            print("n is a prime number.")
+            case.stop()
+        if case(6): pass
+        if case(8):
+            print("n is an even number.")
+            case.stop()
+        if case.default:
+            print("Only single-digit numbers are allowed.")
+
+
+As you can see, C# allows goto, which could be used to jump more dynamically than a fallthrough, but for this purpose, simply allowing it to fall will work.
