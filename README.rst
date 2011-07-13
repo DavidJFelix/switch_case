@@ -10,7 +10,8 @@ Here are a few examples of switch cases (from wikipedia) translated from native 
 Ruby
 ====
 
-    case n
+::
+case n
 when 0 
     puts 'You typed zero'
 when 1, 9 
