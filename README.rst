@@ -83,6 +83,7 @@ That's a little better... still fairly bulky and ugly. We can keep the ruby word
     if when(8):
         print 'n is an even number'
         when.stop()
+    if when(2): pass
     if when(3): pass
     if when(5): pass
     if when(7):
