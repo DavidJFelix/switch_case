@@ -112,6 +112,7 @@ switch_case also has support for indented switch cases (without breaking Python)
         if breakfast(8):
             print 'n is an even number'
             breakfast.stop()
+        if breakfast(2): pass
         if breakfast(3): pass
         if breakfast(5): pass
         if breakfast(7):
