@@ -53,10 +53,7 @@ class Switch(object):
         self.switched_value = value
         self.cont = False
         self.default = True
-
-        if verbose:
-            self.__call__ = self._verbose_call
-
+        self.verbose = verbose
         self.fall_through = fall_through
 
     def fall(self):
