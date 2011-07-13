@@ -10,6 +10,7 @@ Here are a few examples of switch cases (from wikipedia) translated from native 
 Ruby
 ====
 
+The following is a Ruby excerpt:: 
 
     case n
     when 0
