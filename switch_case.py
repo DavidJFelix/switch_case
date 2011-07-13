@@ -27,19 +27,17 @@
 # EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 
 class Switch(object):
-    """
-    """
     def __call__(self, value):
-        if verbose:
+        if not self.verbose:
             if self.switched_value == value:
                 if self.fall_through:
-                    self.cont = True
                     self.default = True
+                    self.cont = True
 
                 else:
                     self.default = False
+                    self.cont = False
 
-                self.valid_case = True
                 return True
 
             elif self.cont:
@@ -55,7 +53,6 @@ class Switch(object):
         self.switched_value = value
         self.cont = False
         self.default = True
-        self.valid_case = False
 
         if verbose:
             self.__call__ = self._verbose_call
@@ -63,11 +60,12 @@ class Switch(object):
         self.fall_through = fall_through
 
     def fall(self):
+        self.default = True
         self.cont = True
 
     def stop(self):
-        self.cont = False
         self.default = False
+        self.cont = False
 
     def __enter__(self):
         return self
