@@ -1,12 +1,12 @@
 
-#switch_case
+# switch_case
 
 A Dynamic, non-cascading Switch/case implementation for Python.
 Since this class was made for users transitioning from languages with switch cases, no reserved words exist for switch case, or should ever be made (to prevent long term use of switch cases). This project exists to demonstrate the power of Python and help transitioning coders.
 
 Here are a few examples of switch cases (from wikipedia) translated from native language to switch_case.py Python implementation:
 
-##Ruby and beyond!
+## Ruby and beyond!
 
 The following is a Ruby excerpt:
 
@@ -28,7 +28,7 @@ The following is a Ruby excerpt:
     end
 ```
 
-###Then you have the Python translation using switch_case.py, note that ruby does **not** have fall through.:
+Then you have the Python translation using switch_case.py, note that ruby does **not** have fall through:
 
 ```python
     #Import switch_case stuff, Ruby doesn't use the word "switch", so we alias it to be nice
@@ -130,7 +130,7 @@ switch_case also has support for indented switch cases (without breaking Python)
 
 Silliness, but it helps illustrate how dynamic the Switch class can be. Unfortunately, there is no support for nested Switch cases, without calling them by different names: Pseudo-code sampler of an equivalent look to:
 
-```
+```python
     switch(n)
         case(1):
             switch(m):
@@ -145,7 +145,7 @@ Silliness, but it helps illustrate how dynamic the Switch class can be. Unfortun
 Of course, if you use nested switch cases, you might have other issues... in your brain.
 
 
-##To you sharp C# folks
+## To you sharp C# folks
 
 Here's a C# excerpt (wikipedia):
 
